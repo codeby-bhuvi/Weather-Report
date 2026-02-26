@@ -92,3 +92,39 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+/* 📅 Forecast Section */
+.forecast-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255,255,255,0.3);
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* EXACTLY 5 cards */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    background: rgba(255,255,255,0.25);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-card img {
+    width: 60px;
+}
+
+@media (max-width: 768px) {
+    .forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
