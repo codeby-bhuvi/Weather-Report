@@ -1,13 +1,94 @@
 body {
-text-align: center;
-font-family: Arial;
-background: linear-gradient(to right, purple, blue);
-color: white;
-padding: 50px;
+    text-align: center;
+    font-family: Arial;
+    background: linear-gradient(to right, purple, blue);
+    color: white;
+    padding: 50px;
 }
+
 #weather-container {
-background: rgba(255,255,255,0.2);
-padding: 20px;
-border-radius: 10px;
-display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* 🔎 Search Section */
+.search-section {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* 🏙 City Input */
+#city-input {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    flex: 1;
+    min-width: 220px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* 🔍 Search Button */
+#search-btn {
+    padding: 12px 30px;
+    background: linear-gradient(to right, purple, blue);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* 🔵 Input Focus State */
+#city-input:focus {
+    border-color: #6a0dad; /* brighter purple */
+    box-shadow: 0 0 10px rgba(106, 13, 173, 0.6);
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.02);
+}
+
+/* 🟣 Button Hover State */
+#search-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+}
+/* ❌ Error Message */
+.error-message {
+    background: #ffe6e6;
+    color: #8b0000;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid red;
+    margin-top: 20px;
+}
+
+/* ⏳ Loading Container */
+.loading-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 🔄 Spinner */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #667eea;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 1s linear infinite;
+}
+
+/* 🔁 Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
